@@ -1,0 +1,32 @@
+name: Chamar Workflow do Repo platform-engineering
+
+on:
+  workflow_dispatch:
+    inputs:
+      param1:
+        description: "Primeiro parâmetro"
+        required: true
+        type: string
+      param2:
+        description: "Segundo parâmetro"
+        required: true
+        type: string
+      param3:
+        description: "Terceiro parâmetro"
+        required: true
+        type: string
+      param4:
+        description: "Quarto parâmetro"
+        required: true
+        type: string
+
+jobs:
+  call-reusable-workflow:
+    # Chama o workflow reutilizável do repo platform-engineering
+    uses: claudio-bianco/platform-engineering/.github/workflows/run-script.yml@main
+    with:
+      param1: ${{ inputs.param1 }}
+      param2: ${{ inputs.param2 }}
+      param3: ${{ inputs.param3 }}
+      param4: ${{ inputs.param4 }}
+      
