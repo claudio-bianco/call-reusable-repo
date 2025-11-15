@@ -33,4 +33,6 @@ jobs:
       param2: ${{ inputs.param2 }}
       param3: ${{ inputs.param3 }}
       param4: ${{ inputs.param4 }}
-      
+    secrets: inherit
+
+    
