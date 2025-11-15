@@ -20,6 +20,10 @@ on:
         required: true
         type: string
 
+permissions:
+  contents: write
+  actions: write
+
 jobs:
   call-reusable-workflow:
     # Chama o workflow reutilizável do repo platform-engineering
